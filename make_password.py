@@ -16,9 +16,9 @@ def make_password():
   length = int(input("How long do you want your password?"))
   os.system("clear")
 
-  #Generate the password
+  #Generate the password 
   password = ""
-  while length > 0:
+  while length < 16:
     password = password + random.choice(characters)
     length -=1
 
