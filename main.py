@@ -4,6 +4,7 @@ import os
 
 from make_password import make_password
 from change_password import change_password
+from showpasswords import show_password
 
 print("Welcome to Password Generator!")
 print("")
@@ -21,7 +22,9 @@ def menu():
     change_password()
     menu()
   elif user_choice == 3:
-    pass
+    show_password()
+    menu()
+
   else:
     pass
 
