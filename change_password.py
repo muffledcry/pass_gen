@@ -28,20 +28,32 @@ def change_password():
     print(f"{app}")
   
   account = input("Which password would you like to change?")
-
-  length = int(input("How long do you want your password?"))
+  length= int(input("Would you like to change your password? Type an Interger For Yes\n"))
   os.system("clear")
 
   characters = string.ascii_letters + string.digits + string.punctuation
 
+  valid_set = [8,9,10,11,12,13,14,15,16]
+  while True: 
+    try: 
+      length = int(input("How long do you want your password? max character 16 and minimum 8\n"))
+      if length in valid_set  :
+        break
+      else:
+        raise KeyError
+    except KeyError:
+      print("Sorry invalid character length, please try again.")
+
+
   password = ""
-  while length > 0:
+  while length < 16 and length > 8 :
     password = password + random.choice(characters)
     length -=1
-
+    
   password_dict[account]["password"] = password
   print("Your password has been changed.")
   print("Your new password is:")
+  print(password)
   print(password_dict[account]["password"])
   input("Press enter to return to the main menu.")
   os.system("clear")

@@ -14,23 +14,22 @@ def make_password():
   user_name = input("What is your username for the site or app?")
   os.system("clear")
   valid_set = [8,9,10,11,12,13,14,15,16]
+  
   while True: 
-   try: 
-    length = int(input("How long do you want your password? max character 16 and minimum 8\n"))
-    if i in valid_set == length:
-      break
-      os.system("clear")
-    else:
-      raise KeyError
-    except KeyError :
+    try: 
+      length = int(input("How long do you want your password? max character 16 and minimum 8\n"))
+      if length in valid_set  :
+        break
+      else:
+        raise KeyError
+    except KeyError:
       print("Sorry invalid character length, please try again.")
+    
   #Generate the password 
   password = ""
   while length < 16 and length > 8 :
     password = password + random.choice(characters)
     length -=1
-  else:
-    print("You have selected an invalid amount, please try again")
   
   with open("passwords.txt", "a") as fobj:
     print(site_app, file=fobj)
