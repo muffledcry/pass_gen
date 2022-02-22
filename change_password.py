@@ -46,14 +46,13 @@ def change_password():
 
 
   password = ""
-  while length < 16 and length > 8 :
+  while length > 0:
     password = password + random.choice(characters)
     length -=1
-    
+  
   password_dict[account]["password"] = password
   print("Your password has been changed.")
   print("Your new password is:")
-  print(password)
   print(password_dict[account]["password"])
   input("Press enter to return to the main menu.")
   os.system("clear")

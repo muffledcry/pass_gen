@@ -27,7 +27,7 @@ def make_password():
     
   #Generate the password 
   password = ""
-  while length < 16 and length > 8 :
+  while length > 0:
     password = password + random.choice(characters)
     length -=1
   

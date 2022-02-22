@@ -3,17 +3,17 @@
     "change_password.py": [
       {
         "id": "527ea0c9-c659-4640-b0ac-daf6c4b646ae",
-        "line": 53,
-        "version": 1,
-        "index": 1226
+        "line": 64,
+        "version": 489,
+        "index": 1590
       }
     ],
     "make_password.py": [
       {
         "id": "b6bcdba2-f543-43fc-9ad5-2bbaf845b52f",
-        "line": 44,
-        "version": 1150,
-        "index": 1231
+        "line": 42,
+        "version": 1219,
+        "index": 1126
       }
     ]
   }
